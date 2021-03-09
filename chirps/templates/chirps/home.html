@@ -2,14 +2,14 @@
 {% block content %}
     {% for chirp in chirps %}
         <article class="media content-section">
-        <div class="media-body">
-            <div class="article-metadata">
-            <a class="mr-2" href="#">{{ chirp.author }}</a>
-            <small class="text-muted">{{ chirp.date_posted|date:"F d, Y" }}</small>
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ chirp.author }}</a>
+                    <small class="text-muted">{{ chirp.date_posted|date:"F d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ chirp.id }}</a></h2>
+                <p class="article-content">{{ chirp.content }}</p>
             </div>
-            <h2><a class="article-title" href="#">{{ chirp.id }}</a></h2>
-            <p class="article-content">{{ chirp.content }}</p>
-        </div>
         </article>
     {% endfor %}
 {% endblock content %}
