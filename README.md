@@ -5,3 +5,4 @@
     - Django
     - SQL
     - Bootstrap4
+    - Email transaction service
