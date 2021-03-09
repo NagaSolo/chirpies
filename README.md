@@ -10,3 +10,7 @@
 
     2nd Phase
     - ELK stack
+
+### Development
+    @main branch
+    - test integration with Postal
