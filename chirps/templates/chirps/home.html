@@ -7,7 +7,7 @@
         <div class="media-body">
             <div class="article-metadata">
             <a class="mr-2" href="{% url 'user-chirps' chirp.author.username %}">{{ chirp.author }}</a>
-            <small class="text-muted">{{ chirp.date_posted|date:"F d, Y" }}</small>
+            <small class="text-muted">{{ chirp.date_posted|date:"F d, Y, H:i" }}</small>
             </div>
             <h2><a class="article-title" href="{% url 'chirp-detail' chirp.id %}">{{ chirp.id }}</a></h2>
             <p class="article-content">{{ chirp.content }}</p>
