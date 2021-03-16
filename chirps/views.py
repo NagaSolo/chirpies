@@ -32,7 +32,7 @@ class UserChirpListView(ListView):
     paginate_by = 5 # paginate by 5 chirp per page
 
     def get_queryset(self):
-        user = get_object_or_404(User, self.kwargs.get('username'))
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Chirp.objects.filter(author=user).order_by('-date_posted')
 
 class ChirpDetailView(DetailView):

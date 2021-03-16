@@ -11,7 +11,7 @@ from .views import (
     UserChirpListView
 )
 urlpatterns = [
-    path('', views.home, name='chirp-home'),
+    path('', ChirpListView.as_view(), name='chirp-home'),
     path('about/', views.about, name='chirp-about'),
     path('user/<str:username>', UserChirpListView.as_view(), name='user-chirps'),
     path('chirp/<int:pk>/', ChirpDetailView.as_view(), name='chirp-detail'), # grab specific primary key of chirp
