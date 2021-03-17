@@ -1,8 +1,5 @@
-__pycache__
-migrations
-db.sqlite3
-env
-media
+# migrations
+# media
 
 # Editors
 .vscode/
