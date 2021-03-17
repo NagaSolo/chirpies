@@ -1,5 +1,6 @@
 ### Description
     - A pseudo-twitter app/service
+    - First prototype is online @ [Cheapies](http://cheapies.herokuapp.com)
 
 ### Tech Stack
     1st Phase
@@ -14,3 +15,6 @@
 ### Development
     @main branch
     - test integration with Postal
+
+### Deployment
+    - First deployment @heroku [Cheapies](http://cheapies.herokuapp.com)
