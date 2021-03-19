@@ -14,3 +14,6 @@
 ### Development
     @main branch
     - test integration with Postal
+
+### Deployment
+    - Prototype is deployed at: http://cheapies.herokuapp.com
