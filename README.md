@@ -18,3 +18,4 @@
 
 ### Deployment
     - First deployment @heroku [Cheapies](http://cheapies.herokuapp.com)
+    - Prototype is deployed at: http://cheapies.herokuapp.com

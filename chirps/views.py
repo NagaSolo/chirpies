@@ -49,6 +49,15 @@ class ChirpCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+class ChirpHomeCreateView(LoginRequiredMixin, CreateView):
+    model = Chirp
+    template_name = 'chirps/chirp_form.html'
+    fields = ['content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
 
 class ChirpUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Chirp
