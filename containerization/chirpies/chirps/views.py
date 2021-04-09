@@ -12,11 +12,11 @@ from django.views.generic import (
 
 from .models import Chirp
 
-def home(request):
-    context = {
-        'chirps': Chirp.objects.all()
-    }
-    return render(request, 'chirps/home.html', context)
+# def home(request):
+#     context = {
+#         'chirps': Chirp.objects.all()
+#     }
+#     return render(request, 'chirps/home.html', context)
 
 class ChirpListView(ListView):
     model = Chirp
