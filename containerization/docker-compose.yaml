@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  db:
+  chirps-db:
     image: postgres
     environment:
       # - "POSTGRES_HOST_AUTH_METHOD=trust"
@@ -9,16 +9,24 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - ./data/db:/var/lib/postgresql/data/
+  migration:
+    build: ./chirpies
+    command: python ./chirpies/manage.py migrate --noinput
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - chirps-db
   web:
     build: ./chirpies
-    command: python ./chirpies/manage.py runserver 0.0.0.0:8000
+    command: bash -c "python ./chirpies/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/usr/src/app
     ports:
       - 8000:8000
     depends_on:
-      - db
+      - migration
+      - chirps-db
 
 volumes:
   postgres_data:
